@@ -1,16 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import Header from "./Components/Header";
-import MainContent from "./Components/MainContent";
-import Footer from "./Components/Footer";
-
+import CheckBox from "./Components/CheckBox";
+import "./style.css";
 function MyApp() {
+  let num = Math.floor(Math.random() * 100 + 1);
+  const styles = {
+    fontFamily: "monospace"
+  };
+  if (num % 2 === 0) styles.color = "red";
+  else styles.color = "blue";
   return (
     <div>
-      <Header />
-      <MainContent />
-      <Footer />
+      <h1> Random Number </h1>
+      <h2 style={styles}> {num} </h2>
     </div>
   );
 }
